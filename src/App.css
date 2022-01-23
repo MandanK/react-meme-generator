@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 1300px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -14,14 +16,13 @@
 }
 
 .App-header {
-  background-color: #053a1a;
-  min-height: 100vh;
+  min-height: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 4, 4);
 }
 
 .App-link {
@@ -37,24 +38,97 @@
   }
 }
 
-input {
-  width: 100%;
+button {
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+}
+
+label {
+  min-width: 30px;
+  height: 25 px;
+  align-items: center;
+  border: none;
+  padding: 5px 2px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.previewButton {
+  background-color: brown;
+  width: 70%;
   height: 100%;
   padding: 5px 5px;
-  margin: 8px 0;
+  margin: 8px 5px;
   box-sizing: border-box;
   text-align: center;
   size: 40px;
   font-size: larger;
 }
 
-button {
-  background-color: #f44336; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
+.downloadButton {
+  background-color: #3a0531;
+  width: 70%;
+  height: 100%;
+  padding: 5px 5px;
+  margin: 8px 5px;
+  box-sizing: border-box;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 40px;
+  size: 40px;
+  font-size: larger;
+}
+
+.select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  border-width: 0;
+  width: 100%;
+  flex: 1;
+  display: none;
+}
+
+:root {
+  --input-border: #8b8a8b;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+
+.input {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+}
+
+main {
+  background-color: rgba(200, 214, 178, 0.705);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#left {
+  float: left;
+  width: 25%;
+}
+
+#righ {
+  float: right;
+  width: 75%;
 }
