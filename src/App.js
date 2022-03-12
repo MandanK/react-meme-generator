@@ -79,7 +79,7 @@ function App() {
               onChange={(e) => {
                 setTopText(e.target.value);
                 setUrl(
-                  `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                  `https://api.memegen.link/images/${memeTemplateName}/${e.target.value}/${bottomText}.jpg`,
                 );
               }}
               onKeyPress={(event) => {
@@ -99,7 +99,7 @@ function App() {
               onChange={(e) => {
                 setBottomText(e.target.value);
                 setUrl(
-                  `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                  `https://api.memegen.link/images/${memeTemplateName}/${topText}/${e.target.value}.jpg`,
                 );
               }}
               onKeyPress={(event) => {
