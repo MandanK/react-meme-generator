@@ -44,7 +44,7 @@ function App() {
   const [memeTemplate, setMemeTemplate] = useState([]);
   const [topText, setTopText] = useState('To be or not to be...');
   const [bottomText, setBottomText] = useState('This is the question!');
-  const [memeTemplateName, setMemeTemplateName] = useState('');
+  const [memeTemplateName, setMemeTemplateName] = useState('aag');
   const [url, setUrl] = useState('https://api.memegen.link/images/ds.png');
 
   // * Let's fetch the templates, the code was found in internet
@@ -77,6 +77,13 @@ function App() {
               id="top_text"
               value={topText}
               onChange={(e) => setTopText(e.target.value)}
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  setUrl(
+                    `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                  );
+                }
+              }}
             />
             <br />
             <label htmlFor="bottom_text"> Bottom text</label>
@@ -85,6 +92,13 @@ function App() {
               id="bottom_text"
               value={bottomText}
               onChange={(e) => setBottomText(e.target.value)}
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  setUrl(
+                    `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                  );
+                }
+              }}
             />
             <br />
             <label htmlFor="template_name"> Template</label>
@@ -93,6 +107,13 @@ function App() {
               id="template_name"
               value={memeTemplateName}
               onChange={(e) => setMemeTemplateName(e.target.value)}
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  setUrl(
+                    `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                  );
+                }
+              }}
             />
             <br />
           </form>
@@ -106,6 +127,13 @@ function App() {
               value={memeTemplateName}
               onChange={(event) => {
                 setMemeTemplateName(event.currentTarget.value);
+              }}
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  setUrl(
+                    `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                  );
+                }
               }}
             >
               {/* Create a map to render an array of templates for the selector*/}
@@ -121,6 +149,13 @@ function App() {
             <button
               // * Create a button to send the modified URL based on the user template selection and text entry to API
               className="previewButton"
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  setUrl(
+                    `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                  );
+                }
+              }}
               onClick={() => {
                 // * As you can see, users by choosing the template, typing the text, modify the URL and this new version will be send to API
                 setUrl(
