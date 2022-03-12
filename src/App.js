@@ -120,7 +120,7 @@ function App() {
           <div>
             <button
               // * Create a button to send the modified URL based on the user template selection and text entry to API
-              class="previewButton"
+              className="previewButton"
               onClick={() => {
                 // * As you can see, users by choosing the template, typing the text, modify the URL and this new version will be send to API
                 setUrl(
@@ -131,7 +131,7 @@ function App() {
               Preview
             </button>
             <button
-              class="downloadButton"
+              className="downloadButton"
               onClick={() => {
                 // * The download function on the top allows users to download the selected memes
                 downloadResource(
