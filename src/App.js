@@ -43,7 +43,7 @@ function downloadResource(URL, filename) {
 function App() {
   const [memeTemplate, setMemeTemplate] = useState([]);
   const [topText, setTopText] = useState('To be or not to be...');
-  const [bottomText, setBottomText] = useState();
+  const [bottomText, setBottomText] = useState('');
   const [memeTemplateName, setMemeTemplateName] = useState('aag');
   const [url, setUrl] = useState('https://api.memegen.link/images/ds.png');
 
@@ -78,8 +78,14 @@ function App() {
               value={topText}
               onChange={(e) => {
                 setTopText(e.target.value);
+                let slash = '';
+                if (bottomText === '') {
+                  slash = '';
+                } else {
+                  slash = '/';
+                }
                 setUrl(
-                  `https://api.memegen.link/images/${memeTemplateName}/${e.target.value}/${bottomText}.jpg`,
+                  `https://api.memegen.link/images/${memeTemplateName}/${e.target.value}${slash}${bottomText}.jpg`,
                 );
               }}
               onKeyPress={(event) => {
