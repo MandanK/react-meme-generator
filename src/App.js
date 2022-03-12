@@ -43,7 +43,7 @@ function downloadResource(URL, filename) {
 function App() {
   const [memeTemplate, setMemeTemplate] = useState([]);
   const [topText, setTopText] = useState('To be or not to be...');
-  const [bottomText, setBottomText] = useState('This is the question!');
+  const [bottomText, setBottomText] = useState();
   const [memeTemplateName, setMemeTemplateName] = useState('aag');
   const [url, setUrl] = useState('https://api.memegen.link/images/ds.png');
 
