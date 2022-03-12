@@ -76,7 +76,12 @@ function App() {
               name="top_text"
               id="top_text"
               value={topText}
-              onChange={(e) => setTopText(e.target.value)}
+              onChange={(e) => {
+                setTopText(e.target.value);
+                setUrl(
+                  `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                );
+              }}
               onKeyPress={(event) => {
                 if (event.key === 'Enter') {
                   setUrl(
@@ -91,7 +96,12 @@ function App() {
               name="bottom_text"
               id="bottom_text"
               value={bottomText}
-              onChange={(e) => setBottomText(e.target.value)}
+              onChange={(e) => {
+                setBottomText(e.target.value);
+                setUrl(
+                  `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                );
+              }}
               onKeyPress={(event) => {
                 if (event.key === 'Enter') {
                   setUrl(
@@ -106,7 +116,12 @@ function App() {
               name="template_name"
               id="template_name"
               value={memeTemplateName}
-              onChange={(e) => setMemeTemplateName(e.target.value)}
+              onChange={(e) => {
+                setMemeTemplateName(e.target.value);
+                setUrl(
+                  `https://api.memegen.link/images/${memeTemplateName}/${topText}/${bottomText}.jpg`,
+                );
+              }}
               onKeyPress={(event) => {
                 if (event.key === 'Enter') {
                   setUrl(
