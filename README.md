@@ -12,4 +12,4 @@ This is a React random meme generator!
 ## Screenshot
 
 
-![Uploading random-meme-generator.png…]()
+<img width="1437" alt="random-meme-generator" src="https://user-images.githubusercontent.com/92727403/164473299-c2b0ae99-6f4b-4c95-8805-3921772c1067.png">
